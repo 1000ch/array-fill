@@ -1,0 +1,48 @@
+{
+  "name": "array-fill",
+  "version": "0.1.0",
+  "description": "[].fill",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:1000ch/array-fill.git"
+  },
+  "keywords": [
+    "array"
+  ],
+  "author": {
+    "name": "1000ch",
+    "email": "shogo.sensui@gmail.com",
+    "url": "http://1000ch.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1000ch/array-fill/issues"
+  },
+  "homepage": "https://github.com/1000ch/array-fill",
+  "devDependencies": {
+    "tape": "^2.13.1"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}
