@@ -1,7 +1,7 @@
 {
   "name": "array-fill",
-  "version": "0.1.0",
-  "description": "[].fill",
+  "version": "1.0.0",
+  "description": "Polyfill for Array.prototype.fill",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/1000ch/array-fill",
   "devDependencies": {
-    "tape": "^2.13.1"
+    "tape": "^4.0.0"
   },
   "testling": {
     "files": "test/*.js",

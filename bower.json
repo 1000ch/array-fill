@@ -1,12 +1,11 @@
 {
   "name": "array-fill",
   "main": "index.js",
-  "version": "0.1.0",
   "homepage": "https://github.com/1000ch/array-fill",
   "authors": [
     "1000ch <shogo.sensui@gmail.com>"
   ],
-  "description": "Array.prototype.fill polyfill",
+  "description": "Polyfill for Array.prototype.fill",
   "keywords": [
     "array",
     "fill"
