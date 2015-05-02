@@ -1,6 +1,6 @@
 {
   "name": "array-fill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Polyfill for Array.prototype.fill",
   "main": "index.js",
   "directories": {
