@@ -16,9 +16,11 @@
 
   }
 
-  Array.prototype.fill = function (value, start, end) {
-    arrayFill(this, value, start, end);
-  };
+  if (!Array.prototype.fill) {
+    Array.prototype.fill = function (value, start, end) {
+      return arrayFill(this, value, start, end);
+    };
+  }
 
 })(this, function (array, value, start, end) {
 
