@@ -1,12 +1,8 @@
 (function(root, arrayFill) {
 
-  if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
 
-    if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = arrayFill;
-    }
-
-    exports.arrayFill = arrayFill;
+    module.exports = arrayFill;
 
   } else if (typeof define === 'function' && define.amd) {
 
@@ -14,12 +10,6 @@
       return arrayFill;
     });
 
-  }
-
-  if (!Array.prototype.fill) {
-    Array.prototype.fill = function (value, start, end) {
-      return arrayFill(this, value, start, end);
-    };
   }
 
 })(this, function (array, value, start, end) {
