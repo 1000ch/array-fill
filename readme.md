@@ -21,7 +21,7 @@ console.log(fill([1, 2, 3], 4, 1));
 From Array object:
 
 ```javascript
-require('array-fill');
+require('array-fill/shim');
 
 var array = [1, 2, 3];
 array.fill(4, -3, -2);
