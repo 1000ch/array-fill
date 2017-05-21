@@ -1,68 +1,47 @@
 var fill = require('../');
 var test = require('tape');
 
-test('array & value', function (t) {
-  t.plan(3);
+test('works with just a value', function (t) {
+  t.plan(1);
 
-  var predicated = [4, 4, 4];
-  var array = fill([1, 2, 3], 4);
+  var original = [1, 2, 3, 4, 5, 6];
+  var filled = [-1, -1, -1, -1, -1, -1];
 
-  for (var i = 0, l = array.length; i < l; i++) {
-    t.equal(array[i], predicated[i]);
-  }
+  t.same(fill(original, -1), filled);
 });
 
-test('array & value & start', function (t) {
-  t.plan(3);
+test('accepts a positive start index', function (t) {
+  t.plan(1);
 
-  var predicated = [1, 4, 4];
-  var array = fill([1, 2, 3], 4, 1);
+  var original = [1, 2, 3, 4, 5, 6];
+  var filled = [1, 2, 3, -1, -1, -1];
 
-  for (var i = 0, l = array.length; i < l; i++) {
-    t.equal(array[i], predicated[i]);
-  }
+  t.same(fill(original, -1, 3), filled);
 });
 
-test('array & value & start & end', function (t) {
-  t.plan(3);
+test('accepts a negative start index', function (t) {
+  t.plan(1);
 
-  var predicated = [1, 4, 3];
-  var array = fill([1, 2, 3], 4, 1, 2);
+  var original = [1, 2, 3, 4, 5, 6];
+  var filled = [1, 2, 3, -1, -1, -1];
 
-  for (var i = 0, l = array.length; i < l; i++) {
-    t.equal(array[i], predicated[i]);
-  }
+  t.same(fill(original, -1, -3), filled);
 });
 
-test('array & value & start & end', function (t) {
-  t.plan(3);
+test('accepts a negative end index', function (t) {
+  t.plan(1);
 
-  var predicated = [1, 2, 3];
-  var array = fill([1, 2, 3], 4, 1, 1);
+  var original = [1, 2, 3];
+  var filled = [4, 2, 3];
 
-  for (var i = 0, l = array.length; i < l; i++) {
-    t.equal(array[i], predicated[i]);
-  }
+  t.same(fill(original, 4, -3, -2), filled);
 });
 
-test('array & value & start & end', function (t) {
-  t.plan(3);
+test('accepts a large start index', function (t) {
+  t.plan(1);
 
-  var predicated = [4, 2, 3];
-  var array = fill([1, 2, 3], 4, -3, -2);
+  var original = [1, 2, 3, 4, 5, 6];
+  var filled = [1, 2, 3, 4, 5, 6];
 
-  for (var i = 0, l = array.length; i < l; i++) {
-    t.equal(array[i], predicated[i]);
-  }
-});
-
-test('array & value & start & end', function (t) {
-  t.plan(3);
-
-  var predicated = [1, 2, 3];
-  var array = fill([1, 2, 3], 4, NaN, NaN);
-
-  for (var i = 0, l = array.length; i < l; i++) {
-    t.equal(array[i], predicated[i]);
-  }
+  t.same(fill(original, -1, 9), filled);
 });
