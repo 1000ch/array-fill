@@ -1,19 +1,4 @@
-(function(root, arrayFill) {
-
-  if (typeof module !== 'undefined' && module.exports) {
-
-    module.exports = arrayFill;
-
-  } else if (typeof define === 'function' && define.amd) {
-
-    define([], function() {
-      return arrayFill;
-    });
-
-  }
-
-})(this, function (array, value, start, end) {
-
+module.exports = function (array, value, start, end) {
   if (!Array.isArray(array)) {
     throw new TypeError('array is not a Array');
   }
@@ -42,5 +27,4 @@
   }
 
   return array;
-
-});
+};
