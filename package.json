@@ -14,7 +14,9 @@
     "url": "git@github.com:1000ch/array-fill.git"
   },
   "keywords": [
-    "array"
+    "array",
+    "fill",
+    "polyfill"
   ],
   "author": {
     "name": "1000ch",

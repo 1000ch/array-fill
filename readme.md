@@ -4,6 +4,12 @@ Polyfill for Array.prototype.fill.
 
 [![testling badge](https://ci.testling.com/1000ch/array-fill.png)](https://ci.testling.com/1000ch/array-fill)
 
+## Install
+
+```bash
+$ npm install --save-dev array-fill
+```
+
 ## Usage
 
 Functionally:
@@ -32,4 +38,4 @@ console.log(array);
 
 ## License
 
-MIT: http://1000ch.mit-license.org
+[MIT](https://1000ch.mit-license.org) © [Shogo Sensui](https://github.com/1000ch)
